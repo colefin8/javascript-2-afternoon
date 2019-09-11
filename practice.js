@@ -17,7 +17,6 @@
 let me = {
   name: "Cole", 
   age: 27,}
-  Window.alert(me.name)
 
 ////////// PROBLEM 2 //////////
 
@@ -69,7 +68,6 @@ backPack.color = "brown"
   After you do the above, alert your entire backPack object.
 */
 
-window.alert(backPack);
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -98,7 +96,8 @@ var user2 = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user2.name = "Bryan G. Smith"
+user2.email = "bryan.smith@devmounta.in"
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -109,20 +108,26 @@ var user2 = {
   Create an empty object called methodCollection.
 */
 
-//Code Here
+methodCollection = {}
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-//Code Here
+methodCollection.alertHello = function(){
+  alert("hello")
+}
+methodCollection.logHello = function(){
+  console.log("hello")
+}
 
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+methodCollection.alertHello()
+methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -131,7 +136,9 @@ var user2 = {
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson (name, birthday, ssn){
+  return {name: name, birthday: birthday, ssn: ssn}
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -140,4 +147,6 @@ var user2 = {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard (cardNumber, expirationDate, securityCode){
+  return {cardNumber: cardNumber, expirationDate: expirationDate, securityCode: securityCode}
+}
